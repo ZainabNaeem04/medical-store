@@ -1,4 +1,12 @@
 <?php
+$url = getenv('DATABASE_URL'); // Railway injects the full URL
+if(!$url){
+    die("DATABASE_URL environment variable not found!");
+}
+$parts = parse_url($url);
+if(!$parts){
+    die("Failed to parse DATABASE_URL");
+}
 $conn = mysqli_connect(
     getenv('DB_HOST'),
     getenv('DB_USER'),
