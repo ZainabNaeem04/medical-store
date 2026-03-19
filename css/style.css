@@ -1,0 +1,146 @@
+body{
+font-family: Arial, sans-serif;
+background:#f4f6f9;
+margin:0;
+padding:0;
+}
+
+/* LOGIN PAGE */
+
+.login-container{
+width:350px;
+margin:120px auto;
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-container h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.login-container label{
+display:block;
+margin-top:10px;
+font-weight:bold;
+}
+
+.login-container input{
+width:100%;
+padding:10px;
+margin-top:5px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+.login-container button{
+width:100%;
+padding:10px;
+margin-top:20px;
+background:#3498db;
+border:none;
+color:white;
+font-size:16px;
+border-radius:4px;
+cursor:pointer;
+}
+
+.login-container button:hover{
+background:#2980b9;
+}
+
+.error{
+color:red;
+text-align:center;
+margin-bottom:10px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+padding:30px;
+}
+
+.dashboard h1{
+margin-bottom:20px;
+}
+
+.menu a{
+display:block;
+padding:10px;
+margin:5px 0;
+background:#3498db;
+color:white;
+text-decoration:none;
+border-radius:4px;
+width:200px;
+}
+
+.menu a:hover{
+background:#2980b9;
+}
+
+/* TABLES */
+
+table{
+border-collapse:collapse;
+width:100%;
+margin-top:20px;
+}
+
+table th, table td{
+border:1px solid #ddd;
+padding:10px;
+text-align:left;
+}
+
+table th{
+background:#3498db;
+color:white;
+}
+
+.signup-text{
+text-align:center;
+margin-top:15px;
+}
+
+.signup-text a{
+color:#3498db;
+text-decoration:none;
+font-weight:bold;
+}
+
+.signup-text a:hover{
+text-decoration:underline;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+table, th, td {
+border: 1px solid #ddd;
+}
+
+th {
+background: #3498db;
+color: white;
+}
+
+td, th {
+padding: 10px;
+text-align: center;
+}
+
+a {
+text-decoration: none;
+color: #3498db;
+}
+
+a:hover {
+text-decoration: underline;
+}
