@@ -1,17 +1,21 @@
 <?php
-$url = getenv('DATABASE_URL'); // Railway injects the full URL
+$url = getenv('DATABASE_URL');
+
 if(!$url){
     die("DATABASE_URL environment variable not found!");
 }
+
 $parts = parse_url($url);
-if(!$parts){
-    die("Failed to parse DATABASE_URL");
+
+$host = $parts['host'];
+$port = $parts['port'];
+$user = $parts['user'];
+$pass = $parts['pass'];
+$db   = ltrim($parts['path'], '/');
+
+$conn = mysqli_connect($host, $user, $pass, $db, $port);
+
+if (!$conn) {
+    die("Database connection failed: " . mysqli_connect_error());
 }
-$conn = mysqli_connect(
-    getenv('DB_HOST'),
-    getenv('DB_USER'),
-    getenv('DB_PASS'),
-    getenv('DB_NAME')
-);
-if(!$conn){ die("DB connection failed: " . mysqli_connect_error()); }
 ?>
