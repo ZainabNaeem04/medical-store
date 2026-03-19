@@ -1,7 +1,9 @@
 <?php
-$conn = mysqli_connect("localhost","root","","medical_store");
-
-if(!$conn){
-die("Connection failed: ".mysqli_connect_error());
-}
+$conn = mysqli_connect(
+    getenv('DB_HOST'),
+    getenv('DB_USER'),
+    getenv('DB_PASS'),
+    getenv('DB_NAME')
+);
+if(!$conn){ die("DB connection failed: " . mysqli_connect_error()); }
 ?>
